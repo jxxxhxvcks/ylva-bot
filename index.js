@@ -1,3 +1,12 @@
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  const ping = new Date();
+  response.sendStatus(200);
+});
+
+app.listen(process.env.PORT);
+
 const { AoiClient } = require("aoi.js");
 
 const client = new AoiClient({
